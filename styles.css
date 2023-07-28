@@ -20,3 +20,7 @@ h1 {
 .start {
     font-size: 2em;
 }
+
+.rps-icon {
+    max-width: 220px;
+}
