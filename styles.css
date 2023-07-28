@@ -3,6 +3,11 @@
 body {
     font-family: 'Press Start 2P', cursive;
     background-image: url(images/paper-background);
+    margin: 0px;
+}
+
+h1, p {
+    margin: 0px;
 }
 
 .ps-font {
@@ -15,6 +20,7 @@ body {
 
 h1 {
     font-size: 3.5em;
+    margin-top: -20px;
 }
 
 .start {
@@ -24,3 +30,13 @@ h1 {
 .rps-icon {
     max-width: 220px;
 }
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+}
+
