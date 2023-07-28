@@ -12,3 +12,11 @@ body {
 .bs-font {
     font-family: 'Bungee Shade', cursive;
 }
+
+h1 {
+    font-size: 3.5em;
+}
+
+.start {
+    font-size: 2em;
+}
