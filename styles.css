@@ -1,3 +1,14 @@
+/* General Style*/
+
 body {
+    font-family: 'Press Start 2P', cursive;
     background-image: url(images/paper-background);
+}
+
+.ps-font {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.bs-font {
+    font-family: 'Bungee Shade', cursive;
 }
