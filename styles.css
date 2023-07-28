@@ -72,3 +72,23 @@ h1 {
     transform: scale(1.1);
     text-shadow: 2px 2px 2px #9e8233, 4px 4px 6px rgb(245, 232, 47);
 }
+
+/* Add animation on elements entering to view */
+.animate {
+    animation-duration: 0.75s;
+    animation-delay: 0.5s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+    animation-fill-mode: backwards;
+  }
+  
+  /* Fade In */
+  .animate.fade {
+    animation-name: animate-fade;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
