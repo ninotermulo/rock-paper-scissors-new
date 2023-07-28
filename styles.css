@@ -63,3 +63,12 @@ h1 {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
+/* Start button animation*/
+.start { 
+    transition: all .15s ease-in-out; 
+    cursor: default;    
+}
+.start:hover { 
+    transform: scale(1.1);
+    text-shadow: 2px 2px 2px #9e8233, 4px 4px 6px rgb(245, 232, 47);
+}
