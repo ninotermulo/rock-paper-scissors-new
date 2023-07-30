@@ -23,6 +23,11 @@ function insertIcons() {
     iconNodesContainer.appendChild(paperIcon);
     iconNodesContainer.appendChild(scissorIcon);
     iconsContainer.appendChild(iconNodesContainer);
+
+    const startButtonDiv = document.querySelector(".start-container");
+    const selectionState = document.createElement('p');
+    selectionState.appendChild(document.createTextNode("CHOOSE YOUR WEAPON"));
+    startButtonDiv.replaceChild(selectionState, startButton);
 }
 
 
