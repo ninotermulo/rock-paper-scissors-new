@@ -5,8 +5,7 @@ startButton.addEventListener("click", insertIcons);
 function insertIcons() {
     const rockIcon = document.createElement('img');
     rockIcon.setAttribute('src', "/images/icons/rock-icon.png");
-    rockIc
-    on.setAttribute('class', "icons");
+    rockIcon.setAttribute('class', "icons");
     
     const paperIcon = document.createElement('img');
     paperIcon.setAttribute('src', "/images/icons/paper-icon.png");
