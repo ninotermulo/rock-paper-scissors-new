@@ -26,10 +26,6 @@ h1 {
     font-size: 2em;
 }
 
-.rps-icon {
-    max-width: 220px;
-}
-
 .main-container {
     height: 100vh;
     display: flex;
@@ -66,6 +62,7 @@ h1 {
 
 /* RPS Icon Animation */
 .rps-icon {
+  max-width: 220px;
   animation-duration: 0.85s;
   animation-delay: 0.8s;
   animation-name: animate-fade;
