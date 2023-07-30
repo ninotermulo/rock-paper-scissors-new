@@ -35,6 +35,10 @@ h1 {
     gap: 7%;
 }
 
+.icon-container {
+  min-height: 200px;
+}
+
 /* H1 Animation */
 .title{
     overflow: hidden; /* Ensures the content is not revealed until the animation */
