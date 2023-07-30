@@ -3,6 +3,7 @@ const startButton = document.querySelector(".start");
 startButton.addEventListener("click", (e) => {
     const iconsContainer = document.createElement('div');
     iconsContainer.setAttribute('id', 'choice-cont');
+    console.log(e);
     
     const rockIcon = document.createElement('img');
     rockIcon.setAttribute('src', "/images/icons/rock-icon.png");
@@ -21,5 +22,5 @@ startButton.addEventListener("click", (e) => {
     iconsContainer.appendChild(scissorIcon);
 
     const rpsIcon = document.querySelector(".rps-icon");
-    document.querySelector(".main-container").replaceChild(iconsContainer, rpsIcon);
+    document.querySelector(".icon-container").replaceChild(iconsContainer, rpsIcon);
 });
