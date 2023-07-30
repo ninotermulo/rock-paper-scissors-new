@@ -1,10 +1,12 @@
 const startButton = document.querySelector(".start");
 
-startButton.addEventListener("click", (e) => {
+startButton.addEventListener("click", insertIcons);
 
+function insertIcons() {
     const rockIcon = document.createElement('img');
     rockIcon.setAttribute('src', "/images/icons/rock-icon.png");
-    rockIcon.setAttribute('class', "icons");
+    rockIc
+    on.setAttribute('class', "icons");
     
     const paperIcon = document.createElement('img');
     paperIcon.setAttribute('src', "/images/icons/paper-icon.png");
@@ -22,4 +24,6 @@ startButton.addEventListener("click", (e) => {
     iconNodesContainer.appendChild(paperIcon);
     iconNodesContainer.appendChild(scissorIcon);
     iconsContainer.appendChild(iconNodesContainer);
-});
+}
+
+
