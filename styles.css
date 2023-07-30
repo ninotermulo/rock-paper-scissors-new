@@ -100,3 +100,17 @@ h1 {
 .start-container {
   min-height: 3em;
 }
+
+/* DOM CSS classes */
+.icons {
+  max-width: 200px;
+  padding: 10px;
+  border: 5px solid transparent;
+}
+
+.icons:hover {
+  border-color: rgb(245, 232, 47);
+  transition: border-color 0.50s ease;
+}
+
+
