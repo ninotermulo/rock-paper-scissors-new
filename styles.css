@@ -22,7 +22,7 @@ h1 {
     margin-top: -20px;
 }
 
-.start {
+p {
     font-size: 2em;
 }
 
@@ -85,6 +85,7 @@ h1 {
   cursor: default;
   animation: start 0.85s ease 5s;
   animation-fill-mode: backwards;
+  font-size: 2em;
 }
 
 @keyframes start {
