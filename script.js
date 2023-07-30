@@ -22,11 +22,13 @@ function insertIcons() {
     iconNodesContainer.appendChild(rockIcon);
     iconNodesContainer.appendChild(paperIcon);
     iconNodesContainer.appendChild(scissorIcon);
-    iconsContainer.appendChild(iconNodesContainer);
+    iconsContainer.appendChild(iconNodesContainer);   
+}
 
+function insertSelectionPar() {
     const startButtonDiv = document.querySelector(".start-container");
-    const selectionState = document.createElement('p');
-    selectionState.appendChild(document.createTextNode("CHOOSE YOUR WEAPON"));
+    const selectionPar = document.createElement('p');
+    selectionPar.appendChild(document.createTextNode("CHOOSE YOUR WEAPON"));
     startButtonDiv.replaceChild(selectionState, startButton);
 }
 
