@@ -49,4 +49,15 @@ function insertSelectionPar() {
     startButtonDiv.replaceChild(selectionPar, startButtonPar);
 }
 
-
+// Check Winner
+/*
+Add event listener on icon click
+Store click event 
+Create 
+*/ 
+let iconElements = document.querySelectorAll('img.icons');
+iconElements.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        console.log(e);
+    })
+})
