@@ -25,6 +25,9 @@ function insertIcons() {
     iconsContainer.appendChild(iconNodesContainer);
 
     insertSelectionPar();
+
+    const title = document.querySelector(".title"); 
+    title.classList.add("title-no-animate");
 }
 
 // Creates image element and add attributes and value to it
