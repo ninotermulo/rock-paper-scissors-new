@@ -40,67 +40,67 @@ p {
 }
 
 /* H1 Animation */
-.title{
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(245, 232, 47); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em;
-    animation: 
-      typing 2.2s 2s steps(30, end),
-      blink-caret .75s 2s step-end infinite;
-    animation-fill-mode: backwards;
-}
-  
-  /* The typing effect */
-  @keyframes typing {
-    0% { width: 0ch }
-    100% { width: 22ch}
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(245, 232, 47); }
-  }
-
+/*.title{
+/*    overflow: hidden; /* Ensures the content is not revealed until the animation */
+/*    border-right: .15em solid rgb(245, 232, 47); /* The typwriter cursor */
+/*    white-space: nowrap; /* Keeps the content on a single line */
+/*    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+/*    letter-spacing: .15em;
+/*    animation: 
+/*      typing 2.2s 2s steps(30, end),
+/*      blink-caret .75s 2s step-end infinite;
+/*    animation-fill-mode: backwards;
+/*}
+/*  
+/*  /* The typing effect */
+/*  @keyframes typing {
+/*    0% { width: 0ch }
+/*    100% { width: 22ch}
+/*  }
+/*  
+/*  /* The typewriter cursor effect */
+/*  @keyframes blink-caret {
+/*    from, to { border-color: transparent }
+/*    50% { border-color: rgb(245, 232, 47); }
+/*  }
+/*
 /* RPS Icon Animation */
 .rps-icon {
   max-width: 220px;
-  animation-duration: 0.85s;
+  /* animation-duration: 0.85s;
   animation-delay: 0.8s;
   animation-name: animate-fade;
   animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
-  animation-fill-mode: backwards;
+  animation-fill-mode: backwards; */
 }
 
-@keyframes animate-fade {
+/* @keyframes animate-fade {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
+} */
 
 /* Start button Animation*/
 .start { 
-  transition: all .15s ease-in-out; 
+  /* transition: all .15s ease-in-out;  */
   cursor: default;
-  animation: start 0.85s ease 5s;
-  animation-fill-mode: backwards;
+  /* animation: start 0.85s ease 5s;
+  animation-fill-mode: backwards; */
   font-size: 2em;
 }
 
-@keyframes start {
+/* @keyframes start {
     0% { font-size: 1em;
          opacity: 0;
     }
     100% { font-size: 2em;
            opacity: 1;
     }
-}
+} */
 
-.start:hover { 
+/* .start:hover { 
   transform: scale(1.1);
   text-shadow: 2px 2px 2px #9e8233, 4px 4px 6px rgb(245, 232, 47);
-}
+} */
 
 .start-container {
   min-height: 2em;
