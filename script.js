@@ -2,6 +2,7 @@ const startButton = document.querySelector("#p-container > p");
 startButton.addEventListener("click", switchSelectPage);
 
 function switchSelectPage() {
+    startButton.removeEventListener("click", switchSelectPage);
     const imgCont = document.querySelector("#icon-container");
     if (imgCont.querySelector('.rps') !== null) {
         document.querySelector('.rps').remove();
@@ -48,15 +49,16 @@ function createImgElement(attrObj) {
 }
 
 function changePar(element, paragraph) {
-    document.querySelector(element).innerText = paragraph;
-    document.querySelector(element).classList.remove("start-hover");
+    const nodeElem = document.querySelector(element);
+    nodeElem.innerText = paragraph;
+    nodeElem.classList.remove("start-hover");
+    nodeElem.style.cursor = "text";
 }
 
 function getUserChoice(e) {
     return e.target.id;    
 }
 
-// Get computer's input
 function getComputerChoice() {
     const computerChoice = Math.floor((Math.random() * 3)) + 1;
     switch(computerChoice) {
