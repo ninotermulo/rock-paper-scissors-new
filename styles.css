@@ -51,8 +51,7 @@ div > p {
   font-size: 2em;
 }
 
-div > p:hover { 
-  transform: scale(1.1);
+.start-hover:hover { 
   text-shadow: 2px 2px 2px #9e8233, 4px 4px 6px rgb(245, 232, 47);
 }
 
