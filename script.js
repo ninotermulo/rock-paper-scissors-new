@@ -13,12 +13,15 @@ function switchSelectPage() {
 function insertIcons() {
     const icons = {
         rockIcon: {
+            'id': 'rock',   
             'src':'/images/icons/rock-icon.png',
             'class': 'icons'},
         paperIcon: {
+            'id': 'paper',
             'src':'/images/icons/paper-icon.png',
             'class': 'icons'},
         scissorIcon: {
+            'id': 'scissor',
             'src':'/images/icons/scissor-icon.png',
             'class': 'icons'}
         };
