@@ -85,7 +85,7 @@ p {
 }
 
 /* Start button Animation*/
-div.p { 
+div > p { 
   transition: all .15s ease-in-out; 
   cursor: default;
   animation: start 0.85s ease 5s;
@@ -102,7 +102,7 @@ div.p {
     }
 }
 
-div.p:hover { 
+div > p:hover { 
   transform: scale(1.1);
   text-shadow: 2px 2px 2px #9e8233, 4px 4px 6px rgb(245, 232, 47);
 }
