@@ -1,6 +1,14 @@
-const startButton = document.querySelector(".start");
+const startButton = document.querySelector("#p-container > p");
+startButton.addEventListener("click", switchSelectPage);
 
-startButton.addEventListener("click", insertIcons);
+function switchSelectPage() {
+    document.querySelector(".rps").remove();   
+    insertIcons();
+    let iconElements = document.querySelectorAll('img.icons');
+    iconElements.forEach((item) => {
+    item.addEventListener('click', iconClick)});
+    changePar('#p-container > p', 'CHOOSE YOUR WEAPON');
+}
 
 function insertIcons() {
     const icons = {
@@ -15,22 +23,14 @@ function insertIcons() {
             'class': 'icons'}
         };
     
-    const iconsContainer = document.querySelector(".icon-container");
-    const iconNodesContainer = document.createElement('div');
-    document.querySelector(".rps-icon").remove();    
-    
+    const iconsContainer = document.querySelector("#icon-container");
+     
     for (const icon in icons) {        
-        iconNodesContainer.appendChild(createImgElement(icons[icon]));
+        iconsContainer.appendChild(createImgElement(icons[icon]));
     }
-    iconsContainer.appendChild(iconNodesContainer);
-
-    insertSelectionPar();
-
-    const title = document.querySelector(".title"); 
-    title.classList.add("title-no-animate");
 }
 
-// Creates image element and add attributes and value to it
+// Creates image element and add attributes and value
 function createImgElement(attrObj) {
     const img = document.createElement('img');
     // Iterate through attribute objects
@@ -40,24 +40,11 @@ function createImgElement(attrObj) {
     return img;
 }
 
-// Switches to Selection Paragraph
-function insertSelectionPar() {
-    const startButtonDiv = document.querySelector(".start-container");
-    const startButtonPar = document.querySelector(".start");
-    const selectionPar = document.createElement('p');
-    selectionPar.appendChild(document.createTextNode("CHOOSE YOUR WEAPON"));
-    startButtonDiv.replaceChild(selectionPar, startButtonPar);
+function changePar(element, paragraph) {
+    document.querySelector(element).innerText = paragraph;
+    document.querySelector(element).classList.remove("start-hover");
 }
 
-// Check Winner
-/*
-Add event listener on icon click
-Store click event 
-Create 
-*/ 
-let iconElements = document.querySelectorAll('img.icons');
-iconElements.forEach((item) => {
-    item.addEventListener('click', (e) => {
-        console.log(e);
-    })
-})
+function iconClick(e) {
+    console.log(e);    
+}
