@@ -3,11 +3,6 @@ startButton.addEventListener("click", switchSelectPage);
 
 function switchSelectPage() {
     startButton.removeEventListener("click", switchSelectPage);
-    const imgCont = document.querySelector("#icon-container");
-    if (imgCont.querySelector('.rps') !== null) {
-        document.querySelector('.rps').remove();
-    }
-
     insertIcons();
     let iconElements = document.querySelectorAll('img.icons');
     iconElements.forEach((item) => {
@@ -16,26 +11,28 @@ function switchSelectPage() {
 }
 
 function insertIcons() {
-    const icons = {
-        rockIcon: {
-            'id': 'rock',   
-            'src':'/images/icons/rock-icon.png',
-            'class': 'icons'},
-        paperIcon: {
-            'id': 'paper',
-            'src':'/images/icons/paper-icon.png',
-            'class': 'icons'},
-        scissorIcon: {
-            'id': 'scissor',
-            'src':'/images/icons/scissor-icon.png',
-            'class': 'icons'}
-        };
+     const icons = {
+         rockIcon: {
+             'id': 'rock',   
+             'src':'/images/icons/rock-icon.png',
+             'class': 'icons'},
+         paperIcon: {
+             'id': 'paper',
+             'src':'/images/icons/paper-icon.png',
+             'class': 'icons'},
+         scissorIcon: {
+             'id': 'scissor',
+             'src':'/images/icons/scissor-icon.png',
+             'class': 'icons'}
+         };
     
-    const iconsContainer = document.querySelector("#icon-container");
-     
-    for (const icon in icons) {        
-        iconsContainer.appendChild(createImgElement(icons[icon]));
+    const imgCont = document.querySelector("#icon-container");
+    if (imgCont.querySelector('.rps') !== null) {
+        document.querySelector('.rps').replaceWith(createImgElement(icons.paperIcon));
     }
+    imgCont.insertBefore(createImgElement(icons.rockIcon), document.querySelector("#paper"));
+    imgCont.appendChild(createImgElement(icons.scissorIcon), document.querySelector("#paper"));
+
 }
 
 // Creates image element and add attributes and value
