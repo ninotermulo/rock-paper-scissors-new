@@ -6,7 +6,7 @@ function switchSelectPage() {
     insertIcons();
     let iconElements = document.querySelectorAll('img.icons');
     iconElements.forEach((item) => {
-    item.addEventListener('click', getUserChoice)});
+    item.addEventListener('click', checkWinner)});
     changePar('#p-container > p', 'CHOOSE YOUR WEAPON');
 }
 
@@ -52,9 +52,9 @@ function changePar(element, paragraph) {
     nodeElem.style.cursor = "text";
 }
 
-function getUserChoice(e) {
-    return e.target.id;    
-}
+// function getUserChoice(e) {
+//     return e.target.id;    
+// }
 
 function getComputerChoice() {
     const computerChoice = Math.floor((Math.random() * 3)) + 1;
@@ -65,5 +65,59 @@ function getComputerChoice() {
         return "paper";
       case 3:
         return "scissor";
+    }
+}
+
+function roundResultPage() {
+    /*
+    Replace paragraph
+        if user win, display 'YOU WIN!'
+        else display 'YOU LOSE!'
+    
+    Create userScore div
+    Append p element with text content 'SCORE'
+    Append p element for score number
+        if user win, add text content 1
+        else add text content 0
+    
+    Create computerScore div
+    Append p element with content 'SCORE'
+    Append p element for score number
+        if opponent win, add text content 1
+        else add text content 0
+
+    Create userPickDiv
+    Append p element with text content 'YOU'
+    Append icon img user clicked
+
+    Create computerDiv
+    Append p element with text content 'OPPONENT'
+    Append icon img computer randomly picked
+
+    Create p element with text content 'VS'
+    */ 
+}
+
+function checkWinner(e) {
+    const userPick = e.target.id;
+    const computerPick = getComputerChoice();  
+    console.log("user pick: " + userPick);
+    console.log("computer pick: " + computerPick);
+    switch (true) {
+        case userPick == "rock" && computerPick == "rock":
+        case userPick == "paper" && computerPick == "paper":
+        case userPick == "scissor" && computerPick == "scissor":
+            // Change UI Tie
+            console.log("Tie!");
+            break;
+        case userPick == "rock" && computerPick == "scissor":
+        case userPick == "paper" && computerPick == "rock":
+        case userPick == "scissor" && computerPick == "paper":
+            // Change UI Win
+            console.log("You Win!");
+            break;
+        default:
+            // Change UI Lose
+            console.log("You Lose!");
     }
 }
