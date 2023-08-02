@@ -98,26 +98,23 @@ function roundResultPage() {
     */ 
 }
 
+// Return object that contains who won, user choice & computer choice
 function checkWinner(e) {
     const userPick = e.target.id;
     const computerPick = getComputerChoice();  
-    console.log("user pick: " + userPick);
-    console.log("computer pick: " + computerPick);
+    const roundResult = {winner: "", user: userPick, computer: computerPick}
     switch (true) {
         case userPick == "rock" && computerPick == "rock":
         case userPick == "paper" && computerPick == "paper":
         case userPick == "scissor" && computerPick == "scissor":
-            // Change UI Tie
-            console.log("Tie!");
-            break;
+            roundResult.winner = "tie"; break;
         case userPick == "rock" && computerPick == "scissor":
         case userPick == "paper" && computerPick == "rock":
         case userPick == "scissor" && computerPick == "paper":
-            // Change UI Win
-            console.log("You Win!");
-            break;
+            roundResult.winner = "user"; break;
         default:
-            // Change UI Lose
-            console.log("You Lose!");
+            roundResult.winner = "computer"; break;
     }
+    console.log(roundResult);
+    // return roundResult;
 }
