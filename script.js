@@ -52,10 +52,6 @@ function changePar(element, paragraph) {
     nodeElem.style.cursor = "text";
 }
 
-// function getUserChoice(e) {
-//     return e.target.id;    
-// }
-
 function getComputerChoice() {
     const computerChoice = Math.floor((Math.random() * 3)) + 1;
     switch(computerChoice) {
@@ -98,7 +94,7 @@ function roundResultPage() {
     */ 
 }
 
-// Return object that contains who won, user choice & computer choice
+// Return object that contains winner, user choice & computer choice
 function checkWinner(e) {
     const userPick = e.target.id;
     const computerPick = getComputerChoice();  
@@ -115,6 +111,5 @@ function checkWinner(e) {
         default:
             roundResult.winner = "computer"; break;
     }
-    console.log(roundResult);
-    // return roundResult;
+    return roundResult;
 }
