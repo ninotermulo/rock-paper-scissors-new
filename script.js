@@ -1,12 +1,16 @@
-const startButton = document.querySelector("#p-container > p");
-startButton.addEventListener("click", switchSelectPage);
+const mainCont = document.querySelector(".main-container");
+const title = document.querySelector("#title");
+const iconCont = document.querySelector(".icon-container");
+const mainPar = document.querySelector("#p-container > p");
+
+mainPar.addEventListener("click", switchSelectPage);
 
 function switchSelectPage() {
-    startButton.removeEventListener("click", switchSelectPage);
+    mainPar.removeEventListener("click", switchSelectPage);
     insertIcons();
-    let iconElements = document.querySelectorAll('img.icons');
+    const iconElements = document.querySelectorAll('img.icons');
     iconElements.forEach((item) => {
-    item.addEventListener('click', checkWinner)});
+    item.addEventListener('click', roundResultPage)});
     changePar('#p-container > p', 'CHOOSE YOUR WEAPON');
 }
 
@@ -26,12 +30,11 @@ function insertIcons() {
              'class': 'icons'}
          };
     
-    const imgCont = document.querySelector("#icon-container");
-    if (imgCont.querySelector('.rps') !== null) {
+    if (iconCont.querySelector('.rps') !== null) {
         document.querySelector('.rps').replaceWith(createImgElement(icons.paperIcon));
     }
-    imgCont.insertBefore(createImgElement(icons.rockIcon), document.querySelector("#paper"));
-    imgCont.appendChild(createImgElement(icons.scissorIcon), document.querySelector("#paper"));
+    iconCont.insertBefore(createImgElement(icons.rockIcon), document.querySelector("#paper"));
+    iconCont.appendChild(createImgElement(icons.scissorIcon), document.querySelector("#paper"));
 
 }
 
@@ -64,7 +67,17 @@ function getComputerChoice() {
     }
 }
 
-function roundResultPage() {
+function roundResultPage(e) {
+    const resultInfo = checkWinner(e);
+
+    // Replace paragraph
+    // if (resultInfo.winner == "user") {
+    //     changePar('#p-container > p', 'YOU WIN!');
+    // } else if (resultInfo.winner == "computer") {
+    //     changePar('#p-container > p', 'YOU LOSE!');
+    // } else {
+    //     changePar('#p-container > p', 'TIE!');
+    // }
     /*
     Replace paragraph
         if user win, display 'YOU WIN!'
