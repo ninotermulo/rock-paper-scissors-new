@@ -1,11 +1,83 @@
-create selection div wrapper
-    add id attribute to div
-add rock icon image inside div
-add paper icon image inside div
-add scissor icon image inside div
-    add class attribute and value for hover effect
-replace rps-icon.png img element with div wrapper with icons
-create p element
-create text node for selection statement
-append text node inside p element
-replace p element 'start' with p element selection
+--On Page Load--
+div container with ID "main-container"
+H1 element with Text Content "ROCK. PAPER. SCISSOR" 
+    Add ID "title"
+div container for icons
+    Add ID "icons-container"
+    Create icon div
+        Insert img element for rps-icon
+        Add ID "rps-icon"
+div container for #main-par
+    Add ID "main-par-cont"
+    p element with Text Content "PRESS TO START"
+        Add ID "main-par"
+Add click event listener to p element 
+    if click, change to --Initial Selection Page--
+
+--Initial Selection Page--
+Remove event listener on #main-par
+Replace rps icon with paper icon
+Add rock icon before paper icon
+Add scissor after paper icon 
+Replace #main-par text content with "CHOOSE YOUR WEAPON"
+Add event Listener on img icons
+Whichever clicked, initialize playFiveRounds
+
+--playFiveRounds--
+Remove img click event listener
+Initialize variable for user score and set value to 0
+Initialize variable for computer score and set value to 0
+Get user choice in string value
+Get computer random choise in string value
+Check winner
+    whoever wins, increment one to score
+
+If user score or computer score equal to 5
+    Display --Final Result Page--
+    If user clicked "PLAY AGAIN"
+        Go back to --On Page Load--
+
+Else
+    Display --Round Result Page--
+    If user clicked somewhere
+        Display --Round Select Page--
+
+
+--Round Result Page--
+Replace paper icon with p element with text content "VS"
+Replace rock icon with user pick icon
+Replace scissor icon with computer pick icon
+Add user score board before user pick icon
+Add computer score board after computer pick icon
+Replace #main-par text content:
+    if user won, "YOU WIN"
+    if computer won, "YOU LOSE"
+Add click event listener on body
+    if user click, switch to --ROUND Select Page--
+
+--ROUND Select Page--
+Remove body event listener
+Replace "vs" p element with paper icon
+Replace user pick icon with rock icon
+Replace computer pick icon with scissor icon
+Move user score board inside main-par div and insert before #main-par
+Move computer score board inside main-par div and insert after #main-par
+Replace #main-par text content with "CHOOSE YOUR WEAPON"
+Add click event listener on img icons
+    Whichever is clicked, switch to --Round result Page--
+
+--Final Result Page--
+Add p element with text content "FINAL SCORE" after #title
+remove paper icon
+Replace rock icon with user score board
+Replace scissor icon with user score board
+Replace #main-par text Content
+    if user won replace with "GOD LIKE"
+    else replace with "BETTER LUCK NEXT TIME"
+Create p element button with text content "PLAY AGAIN"
+Add click event listener
+    When user clicked, go back to --On Load Page--
+
+
+
+

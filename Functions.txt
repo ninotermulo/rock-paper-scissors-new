@@ -1,0 +1,34 @@
+Create img icon 
+    Take string name as parameter
+    Add default parameter that takes class attribute value
+    create div element
+    create img element
+    add src attribute with value "image/icons/${parameter}-icon.png"
+    add class attribute for either default or specified value
+    
+    if "rock"
+        add id attribute with value "rock"
+    if "paper"
+        add id attribute with value "paper"
+    if "scissor"
+        add id attribute with value "scissor"
+    if "rps"
+        add id attribute with value "rps"
+    append img element to div element
+
+Replace #main-par
+    Take string parameter text content
+    Query #main-par
+        Replace old text content with new text content string parameter
+
+Create score board
+    Take two parameters: string and number parameter
+    Create score board div
+    Create p element
+        Add text content based on string input ("YOUR SCORE" || "OPPONENT SCORE")
+    Append p element to score board div
+    Create score p element
+        Add text content based on number input
+    Append score p element to score board div
+     
+
