@@ -58,3 +58,39 @@ function playFiveRounds() {
         item.removeEventListener('click', (e) => console.log(e))});
     
 }
+
+
+
+
+
+// Return object that contains winner, user choice & computer choice
+function checkWinner(e) {
+    const userPick = e.target.id;
+    const computerPick = getComputerChoice();  
+    const roundResult = {winner: "", user: userPick, computer: computerPick}
+    switch (true) {
+        case userPick == "rock" && computerPick == "rock":
+        case userPick == "paper" && computerPick == "paper":
+        case userPick == "scissor" && computerPick == "scissor":
+            roundResult.winner = "tie"; break;
+        case userPick == "rock" && computerPick == "scissor":
+        case userPick == "paper" && computerPick == "rock":
+        case userPick == "scissor" && computerPick == "paper":
+            roundResult.winner = "user"; break;
+        default:
+            roundResult.winner = "computer"; break;
+    }
+    return roundResult;
+}
+
+function getComputerChoice() {
+    const computerChoice = Math.floor((Math.random() * 3)) + 1;
+    switch(computerChoice) {
+      case 1:
+        return "rock";
+      case 2:
+        return "paper";
+      case 3:
+        return "scissor";
+    }
+}
